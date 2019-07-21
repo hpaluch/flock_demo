@@ -1,0 +1,5 @@
+# QNX SDP 7 build directory
+build/
+# vim backup files
+*.swp
+*~
