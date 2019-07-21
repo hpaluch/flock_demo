@@ -2,7 +2,7 @@
 
 Here is an simple example of using `flock(2)` on 
 QNX Neutrino RTOS 7/x86. It hopefully make you aware
-that some filesystems (for example RAM disk filesystem) d
+that some filesystems (for example RAM disk filesystem on `/tmp`)
 do not support `flock(2)` call - will return `Function not implemented`.
 
 
@@ -14,6 +14,17 @@ QNX Neutrino RTOS 7. I tested it on `QNX SDP 7.0 BSP for Generic x86`
 modified for VirtualBox
 Please see http://blackberry.qnx.com/en/developers/bsp for list of available
 BSPs.
+
+Details of my target RTOS:
+```bash
+pidin info
+
+CPU:X86 Release:7.0.0  FreeMem:598MB/639MB BootTime:Jul 21 09:00:31 GMT 2019
+ Actual resident free memory:600Mb
+Processes: 22, Threads: 51
+Processor1: 263730 AMD ?86 F15M1qS2 2006MHz FPU
+```
+
 
 You may choose any of these options:
 * import this project into Momentics IDE 
