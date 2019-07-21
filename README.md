@@ -20,17 +20,22 @@ To run `make` from CLI you need to:
 
 * setup environment variables and PATH for build using command like:
 
-  ```
+  ```bash
   source ~/qnx700/qnxsdp-env.sh
   ```
 
 * then you can just issue:
-  ```
+  ```bash
   make
   ```
 
   See comments at the top of `Makefile` how to build for other
   platforms (than `x86` - 32-bit)  and/or build type different from `debug`.
+
+  For example to build `x86_64` (64-bit) binary use:
+  ```bash
+  make clean all PLATFORM=x86_64
+  ```
 
 # Running 
 
@@ -40,7 +45,7 @@ To run binary you can use any of:
 * upload and run binary on QNX Neutrino RTOS target, for example using commands
   like:
 
-  ```
+  ```bash
   # replace 192.168.56.102 wiht IP of your QNX Neutrino RTOS
   qnx_ip=192.168.56.102
   curl -T build/x86-debug/flock_demo  ftp://qnxuser:qnxuser@$qnx_ip:/tmp/

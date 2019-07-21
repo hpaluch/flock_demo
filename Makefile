@@ -2,7 +2,7 @@
 
 ARTIFACT = flock_demo
 
-#Build architecture/variant string, possible values: x86, armv7le, etc...
+#Build architecture/variant string, possible values: x86_64, armv7le, etc...
 PLATFORM ?= x86
 
 #Build profile, possible values: release, debug, profile, coverage
