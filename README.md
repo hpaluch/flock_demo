@@ -1,4 +1,4 @@
-# `flock_demo`
+# flock(2) demo for QNX Neutrino RTOS 7
 
 Here is an simple example of using `flock(2)` on 
 QNX Neutrino RTOS 7/x86. It hopefully make you aware
