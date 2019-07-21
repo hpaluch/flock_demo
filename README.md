@@ -10,7 +10,10 @@ do not support `flock(2)` call - will return `Function not implemented`.
 
 You need to have installed [QNX SDP 7.0](http://blackberry.qnx.com/en/sdp7).
 To run this demo you need also one target (VM is fine) with running
-QNX Neutrino RTOS 7
+QNX Neutrino RTOS 7. I tested it on `QNX SDP 7.0 BSP for Generic x86`
+modified for VirtualBox
+Please see http://blackberry.qnx.com/en/developers/bsp for list of available
+BSPs.
 
 You may choose any of these options:
 * import this project into Momentics IDE 
@@ -49,7 +52,7 @@ To run binary you can use any of:
   # replace 192.168.56.102 wiht IP of your QNX Neutrino RTOS
   qnx_ip=192.168.56.102
   curl -T build/x86-debug/flock_demo  ftp://qnxuser:qnxuser@$qnx_ip:/tmp/
-  # trick to chmod binary without chmod command
+  # trick to chmod binary without chmod command (missing on default BSP)
   curl  -Q "site chmod 0777 /tmp/flock_demo"  ftp://qnxuser:qnxuser@$qnx_ip
   ```
 
