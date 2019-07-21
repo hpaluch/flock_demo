@@ -8,7 +8,9 @@ do not support `flock(2)` call - will return `Function not implemented`.
 
 # Setup
 
-You need to have installed `QNX SDP 7.0`.
+You need to have installed [QNX SDP 7.0](http://blackberry.qnx.com/en/sdp7).
+To run this demo you need also one target (VM is fine) with running
+QNX Neutrino RTOS 7
 
 You may choose any of these options:
 * import this project into Momentics IDE 
@@ -26,6 +28,9 @@ To run `make` from CLI you need to:
   ```
   make
   ```
+
+  See comments at the top of `Makefile` how to build for other
+  platforms (than `x86` - 32-bit)  and/or build type different from `debug`.
 
 # Running 
 
@@ -52,6 +57,7 @@ flock(fd=3, fname='/tmp/lock1', LOCK_EX): Function not implemented
 
 ```
 Yes - it fails on `/tmp/` which is RAM disk filesystem (intentionally limited)
+It is mentioned on [RAM "filesystem"](http://www.qnx.com/developers/docs/7.0.0/#com.qnx.doc.neutrino.sys_arch/topic/fsys_DEVSHMEM.html) page.
 
 Need to try other FS.
 
@@ -74,8 +80,6 @@ The command should work on any Unix like fileystem on Linux:
 
 While in sleep you can try run another instance of `/tmp/linux_flock_demo`
 to see `LOCK_EX` (exclusive) in action.
-
-
 
 --hp
 
